@@ -13,13 +13,13 @@ User: {
 Bucket: {
     name: string,
     id: string,
+    userId: string,
 }
 
 Todo: {
     description: string,
-    status: string, // done or pending
+    done: boolean, // true or false
     id: string,
-    userId: string,
     bucketId: string
 }
 
@@ -37,7 +37,6 @@ ________________________________________________
         email,
     }
     -RES - {
-        name,
         token
     }
 
@@ -61,7 +60,7 @@ ________________________________________________
     }
     -RES - {
         description,
-        status,
+        done,
         id,
         userId,
         bucketId
@@ -90,7 +89,7 @@ ________________________________________________
     -/todo/toggle/:id
     -REQ - {}
     -RES - {
-        status
+        done
     }
 
 *Create Bucket
